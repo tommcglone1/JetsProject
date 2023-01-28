@@ -1,9 +1,9 @@
 package com.skilldistillery.entities;
 
-public class FighterJet extends Jet implements GunRun{
-	
+public class FighterJet extends Jet implements GunRun {
+
 	public FighterJet() {
-		
+
 	}
 
 	public FighterJet(String model, double speed, int range, long price) {
@@ -12,17 +12,24 @@ public class FighterJet extends Jet implements GunRun{
 	}
 
 	@Override
-	public void attack() {
-		System.out.println("BBBBBRRRRTTTTT");
+	public String attack() {
+		return " BBBBBBBBBBBBBBBBBBBBBBBBBBBRRRRRRRRRRRRRRRRRRRRRTTTTTTTTTTTTTTTTTTTTT";
 	}
 
 	@Override
 	public String toString() {
-		return "FighterJet [  Model=" + getModel() + ", Speed="+ getSpeed() +" mph " + "SpeedInMach=" + 
-	getSpeedInMach() + ", Range()=" + getRange() + ", Price()=" + getPrice() + "]";
+		return "FighterJet  [  Model=" + getModel() + ", Speed=" + getSpeed() + " mph " + ", Range=" + getRange()
+				+ ", Price=" + getPrice() + "]";
 	}
-	
-	
-	
+
+	@Override
+	public void fly() {
+
+		double timeJetCanFly = ((getRange() / getSpeed()) * 60);
+		int flightTime = (int) timeJetCanFly;
+		System.out.println("FighterJet     model=" + getModel() + ", speed=" + getSpeed() + ", range=" + getRange() + ", price="
+				+ getPrice() + ". This jet can fly for " + flightTime + " minutes");
+		System.out.println("WWWWWWWWWWWOOOOOOOOOOOOSSSSSSSSSSSSHHHHHHHHH PEW PEW");
+	}
 
 }

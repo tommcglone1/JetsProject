@@ -21,16 +21,8 @@ public abstract class Jet {
 		this.price = price;
 	}
 	
-	public void fly() {
-		System.out.println("wooooooosh");
-		
-	}
-	public double getSpeedInMach() {
-		double machSpeed = speed / 761.21;
-		
-		return machSpeed;
-	}
-	
+	public abstract void fly(); 
+
 	
 	public String getModel() {
 		return model;

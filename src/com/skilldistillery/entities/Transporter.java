@@ -1,9 +1,9 @@
 package com.skilldistillery.entities;
 
-public class Transporter extends Jet implements LoadTroops{
+public class Transporter extends Jet implements LoadTroops {
 
 	public Transporter() {
-		
+
 	}
 
 	public Transporter(String model, double speed, int range, long price) {
@@ -11,16 +11,23 @@ public class Transporter extends Jet implements LoadTroops{
 	}
 
 	@Override
-	public void gearUp() {
-		System.out.println("Green Light GO!");
+	public String gearUp() {
+		return "Load up into ";
 	}
 
 	@Override
 	public String toString() {
-		return "Transporter [  Model=" + getModel() + ", Speed="+ getSpeed() +" mph " + "SpeedInMach=" + 
-	getSpeedInMach() + ", Range()=" + getRange() + ", Price()=" + getPrice() + "]";
+		return "Transporter [  Model=" + getModel() + ", Speed=" + getSpeed() + " mph " + ", Range=" + getRange()
+				+ ", Price=" + getPrice() + "]";
 	}
-	
-	
 
+	@Override
+	public void fly() {
+
+		double timeJetCanFly = ((getRange() / getSpeed()) * 60);
+		int flightTime = (int) timeJetCanFly;
+		System.out.println("Transporter    model=" + getModel() + ", speed=" + getSpeed() + ", range=" + getRange() + ", price="
+				+ getPrice() + ". This jet can fly for " + flightTime + " minutes");
+				System.out.println("WWWWOOOOOSSSSHHHH");
+	}
 }

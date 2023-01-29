@@ -20,10 +20,10 @@ public class JetsApp {
 	}
 
 	public void run() {
-		UserSelection();
+		userSelection();
 	}
 
-	public void UserSelection() {
+	public void userSelection() {
 
 		boolean usingMenu = true;
 		int inputInt = 0;
